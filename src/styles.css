@@ -1,0 +1,362 @@
+[hidden] {
+  display: none !important;
+}
+* {
+  box-sizing: border-box;
+}
+:root {
+  font:
+    14px/1.5 "Segoe UI",
+    system-ui,
+    sans-serif;
+  color: #303631;
+  background: #f6f5ef;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+button,
+input,
+textarea,
+select {
+  -webkit-app-region: no-drag;
+}
+button {
+  border: 0;
+  cursor: pointer;
+  border-radius: 7px;
+  background: #e8e8df;
+  padding: 8px 12px;
+}
+button:hover {
+  filter: brightness(0.96);
+}
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #426e5c;
+  outline-offset: 2px;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+input,
+textarea,
+select {
+  border: 1px solid #d5d8cc;
+  border-radius: 6px;
+  padding: 8px;
+  background: #fff;
+}
+header {
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 20px;
+  user-select: none;
+}
+h1 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 650;
+  letter-spacing: -0.4px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.brand-mark {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px 4px 9px 4px;
+  background: #e7bf47;
+  transform: rotate(-7deg);
+}
+.manager-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.manager-actions select {
+  max-width: 110px;
+  font-size: 12px;
+}
+.manager-content {
+  padding: 0 20px 22px;
+}
+.intro {
+  color: #73796f;
+  font-size: 12px;
+  margin: 0 0 18px;
+}
+.manager-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.primary {
+  background: #365e4b;
+  color: #fff;
+}
+.tabs {
+  display: flex;
+  gap: 4px;
+}
+.tabs button {
+  background: transparent;
+  font-size: 12px;
+}
+.tabs button[aria-pressed="true"] {
+  background: #e3e7dc;
+  color: #234934;
+}
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+}
+.note-card {
+  background: var(--paper);
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 155px;
+  border: 1px solid #0000000d;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.note-card h2 {
+  font-size: 14px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.note-card p {
+  font-size: 12px;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  flex: 1;
+}
+.card-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.card-actions button {
+  font-size: 11px;
+  padding: 6px 9px;
+  background: #ffffff70;
+}
+.card-meta {
+  font-size: 10px;
+  color: #636b61;
+}
+.empty {
+  padding: 38px 12px;
+  text-align: center;
+  border: 1px dashed #cdd2c5;
+  border-radius: 12px;
+  color: #73796f;
+}
+.footer-note {
+  font-size: 11px;
+  color: #757d70;
+  margin-top: 22px;
+}
+.note-window {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+}
+.note-window header {
+  padding: 8px 10px;
+  background: #00000005;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.note-window header button {
+  background: transparent;
+  font-size: 16px;
+  padding: 3px 8px;
+  min-width: 28px;
+  height: 30px;
+}
+.note-window .note-toolbar {
+  display: flex;
+  gap: 2px;
+}
+.note-window header button[aria-pressed="true"] {
+  background: #ffffff80;
+  color: #285542;
+}
+.note-editor {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  flex: 1;
+  min-height: 0;
+  gap: 5px;
+}
+.note-title {
+  font-size: 18px;
+  font-weight: 650;
+  background: transparent;
+  border: 0;
+  padding: 4px 0;
+}
+.note-body {
+  resize: none;
+  flex: 1;
+  min-height: 55px;
+  background: transparent;
+  border: 0;
+  padding: 5px 0;
+  line-height: 1.55;
+}
+.note-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 12px 10px;
+  flex-shrink: 0;
+}
+.palette {
+  display: flex;
+  gap: 5px;
+}
+.swatch {
+  border: 1px solid #0003;
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--paper);
+}
+.swatch[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px #53674d;
+  outline-offset: 1px;
+}
+.font-size {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.font-size button {
+  padding: 3px 6px;
+  background: #ffffff50;
+  font-size: 11px;
+}
+.save-status {
+  font-size: 9px;
+  color: #65715e;
+  padding: 0 15px 8px;
+  flex-shrink: 0;
+}
+#error {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: #a43131;
+  color: #fff;
+  font-size: 12px;
+  margin: 0;
+  padding: 10px;
+  max-height: 90px;
+  overflow: auto;
+}
+body[data-color="yellow"],
+[data-color="yellow"] {
+  --paper: #fff2b6;
+}
+body[data-color="mint"],
+[data-color="mint"] {
+  --paper: #d9edd8;
+}
+body[data-color="blue"],
+[data-color="blue"] {
+  --paper: #dbeaf4;
+}
+body[data-color="lavender"],
+[data-color="lavender"] {
+  --paper: #e8e1f6;
+}
+body[data-color="rose"],
+[data-color="rose"] {
+  --paper: #f7dfe2;
+}
+body[data-color="gray"],
+[data-color="gray"] {
+  --paper: #e8e9e2;
+}
+body[data-font="12"] .note-body {
+  font-size: 12px;
+}
+body[data-font="13"] .note-body {
+  font-size: 13px;
+}
+body[data-font="14"] .note-body {
+  font-size: 14px;
+}
+body[data-font="15"] .note-body {
+  font-size: 15px;
+}
+body[data-font="16"] .note-body {
+  font-size: 16px;
+}
+body[data-font="17"] .note-body {
+  font-size: 17px;
+}
+body[data-font="18"] .note-body {
+  font-size: 18px;
+}
+body[data-font="19"] .note-body {
+  font-size: 19px;
+}
+body[data-font="20"] .note-body {
+  font-size: 20px;
+}
+body[data-font="21"] .note-body {
+  font-size: 21px;
+}
+body[data-font="22"] .note-body {
+  font-size: 22px;
+}
+body[data-font="23"] .note-body {
+  font-size: 23px;
+}
+body[data-font="24"] .note-body {
+  font-size: 24px;
+}
+body[data-font="25"] .note-body {
+  font-size: 25px;
+}
+body[data-font="26"] .note-body {
+  font-size: 26px;
+}
+body[data-font="27"] .note-body {
+  font-size: 27px;
+}
+body[data-font="28"] .note-body {
+  font-size: 28px;
+}
